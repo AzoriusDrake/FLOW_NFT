@@ -1,0 +1,94 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLOW 1.0</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&display=swap"
+          rel="stylesheet" />
+       <script src="https://unpkg.com/xrpl/build/xrpl-latest-min.js"></script>
+</head>
+
+<body>
+    <div class="start"></div>
+    <div class="container">
+        <header>
+            <div class="title button__download">
+                <span class="title__main">FLOW</span>
+                <span class="title__version">SEASON 1</span>
+            </div>
+            <div class="walletButton">
+                <span>
+                    <img id="walletButton" src="../static/wallet_icon.png" alt="Connect your wallet here" width="32" height="32">
+                </span>
+            </div>
+        </header>
+        <div class="palettes">
+            <div class="title">Palette</div>
+            <div class="thumbnails">
+            </div>
+        </div>
+        <div class="options">
+            <div class="option">
+                <div class="title">
+                    Scale
+                </div>
+                <!--  <input type="range" class="range range__scale" min="0.001" max="0.05" step="0.001"> -->
+                <input type="range" class="range range__scale" min="1" max="8" step="1">
+                <output class="bubble bubble__scale"></output>
+            </div>
+            <div class="option">
+                <div class="title">
+                    Deviance
+                </div>
+                <!--   <input type="range" class="range range__multiplier" min="1" max="200"> -->
+                <input type="range" class="range range__multiplier" min="1" max="8" step="1">
+                <output class="bubble bubble__multiplier"></output>
+            </div>
+            <div class="option">
+                <div class="title">
+                    Depth
+                </div>
+                <input type="range" class="range range__depth" min="1" max="3">
+                <output class="bubble bubble__depth"></output>
+            </div>
+            <div class="option">
+                <div class="title">
+                    Style
+                </div>
+                <input type="range" class="range range__style" min="1" max="4">
+                <output class="bubble bubble__style"></output>
+            </div>
+            <div class="option">
+                <div class="title">
+                    Cycles
+                </div>
+                <input type="range" class="range range__cycles" min="500" max="2222">
+                <output class="bubble bubble__cycles"></output>
+            </div>
+            <div class="button button__audio">Generate soundtrack</div>
+            <div class="button button__randomize">Randomize</div>
+        </div>
+        <canvas class="js-canvas" width="500" height="500"> </canvas>
+        <footer>
+            <div class="buttons">
+                <div class="button button__restart">Restart</div>
+                <div class="button button__pause">Pause</div>
+            </div>
+            <!-- <div class="button button__download">Download</div> -->
+            <div class="cycles">
+                <div class="desc">Cycles</div>
+                <div class="amount"></div>
+                <div class="total"></div>
+            </div>
+            <div class="button button__mint" id="mintButton">Mint</div>
+        </footer>
+    </div>
+</body>
+</html>
